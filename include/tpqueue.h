@@ -23,8 +23,7 @@ void push(const T& value) {
 if (isFull()) {
 throw std::string("is Full!");
 } else {
-int flag = last; 
-for (int i = first; i < last; i++) {
+int flag = last; for (int i = first; i < last; i++) {
 if (value.prior > arr[i].prior) {
 flag = i;
 break; }
