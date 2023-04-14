@@ -20,9 +20,9 @@ bool isFull() const {
 return size == count;
 }
 void push(const T& value) {
-if (isFull())
+if (isFull()) {
 throw std::string("is Full!");
-else {
+} else {
 int flag = last; 
 }
 for (int i = first; i < last;i++) {
@@ -31,7 +31,7 @@ flag = i;
 break; 
 }
 }
-for (int i = last; i < flag;i--) {
+for (int i = last; i > flag;i--) {
 arr[i % size] = arr[(i - 1) % size];
 }
 arr[flag % size] = value;
